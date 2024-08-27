@@ -4,7 +4,7 @@ from rest_framework.exceptions import AuthenticationFailed
 from .models import User
 
 
-class JWTauthentication(BaseAuthentication):
+class CookieJWTAuthentication(BaseAuthentication):
     def authenticate(self, request):
         auth = get_authorization_header(request).split()
         
